@@ -22,8 +22,8 @@ namespace MenuNamespace
             for (var i = 0; i < menuItems.Length; i++)
             {
                 menu[i] = new Item(
-                    MainClass.windowWidth / 2 - menuItems[i].Length / 2,
-                    MainClass.windowHeight / 2 + i * 2,
+                    MainClass.windowWidth/2 - menuItems[i].Length/2,
+                    MainClass.windowHeight/2 + i*2,
                     menuItems[i],
                     i
                     );

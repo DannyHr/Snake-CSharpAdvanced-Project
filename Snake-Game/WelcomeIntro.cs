@@ -51,10 +51,10 @@ namespace WelcomeIntroNamespace
 
         public static void PrintWelcome()
         {
-            Console.SetCursorPosition(0, MainClass.windowHeight / 10);
+            Console.SetCursorPosition(0, MainClass.windowHeight/10);
             for (var i = 0; i < template.Length; i++)
             {
-                Console.WriteLine(template[i].PadLeft(template[i].Length / 2 + MainClass.windowWidth / 2));
+                Console.WriteLine(template[i].PadLeft(template[i].Length/2 + MainClass.windowWidth/2));
             }
         }
     }
