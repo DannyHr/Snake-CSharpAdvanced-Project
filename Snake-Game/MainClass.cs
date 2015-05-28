@@ -14,6 +14,8 @@ namespace MainNamespace
             Console.CursorVisible = false;
             Console.Title = "SNAKE GAME by Team \"ALLIED TION\"";
 
+            Console.ForegroundColor = ConsoleColor.Gray;
+            IntroEndNamespace.IntroAndEndAnimation.IntroAnimation();
 
             Console.WindowHeight = windowHeight;
             Console.BufferHeight = Console.WindowHeight;

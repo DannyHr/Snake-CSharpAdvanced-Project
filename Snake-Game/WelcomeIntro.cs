@@ -12,7 +12,7 @@ namespace WelcomeIntroNamespace
             "#                                             #",
             "#                   WELCOME                   #",
             "#                   TO THE                    #",
-            "#                 SNAKE GAME                  #",
+            "#      SNAKE GAME - Hungry Python Edition     #",
             "#                                             #",
             "###############################################",
             "              presented by \"Allied Tion\" team"

@@ -1,5 +1,8 @@
 ﻿using System;
+using CreditsNamespace;
+using HighscoreNamespace;
 using MainNamespace;
+using SnakeNamespace;
 using WelcomeIntroNamespace;
 
 namespace MenuNamespace
@@ -14,7 +17,8 @@ namespace MenuNamespace
             {
                 "Play",
                 "Highscore",
-                "Credits"
+                "Credits",
+                "Exit"
             };
 
             var menu = new Item[menuItems.Length];
@@ -43,7 +47,10 @@ namespace MenuNamespace
             }
             var currentSelected = 0;
             while (true)
-            {
+            {   
+                Console.ForegroundColor=ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.Black;
+                WelcomeIntro.PrintWelcome();
                 var pressedKey = Console.ReadKey();
                 if (pressedKey.Key == ConsoleKey.DownArrow)
                 {
@@ -72,7 +79,6 @@ namespace MenuNamespace
                 for (var i = 0; i < menuItems.Length; i++)
                 {
                     menu[i].DrawItem();
-
                     Console.WriteLine();
                 }
                 if (pressedKey.Key == ConsoleKey.Enter)
@@ -80,17 +86,22 @@ namespace MenuNamespace
                     if (currentSelected == 0)
                     {
                         Console.Clear();
-                        Console.WriteLine("0");
+                        Snake.SnakeGame();
                     }
                     else if (currentSelected == 1)
                     {
                         Console.Clear();
-                        Console.WriteLine("1");
+                        Highscore.ShowHighScores();
                     }
                     else if (currentSelected == 2)
                     {
                         Console.Clear();
-                        Console.WriteLine("2");
+                        Credits.PrintCredits();
+                    }
+                    else if (currentSelected == 3)
+                    {
+                        IntroEndNamespace.IntroAndEndAnimation.EndAnimation();
+                        Environment.Exit(0);
                     }
                 }
             }
