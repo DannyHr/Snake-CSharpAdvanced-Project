@@ -11,17 +11,17 @@ namespace HighscoreNamespace
     {
         public static void EnterHighScores(int newScore, string name)
         {
-            if (!File.Exists("../../highscores.txt"))
+            if (!File.Exists("data/highscores.txt"))
             {
-                File.CreateText("../../highscores.txt");
+                File.CreateText("data/highscores.txt");
             }
-            File.AppendAllText("../../highscores.txt", newScore.ToString() + " " + name + "\n", System.Text.Encoding.ASCII);
+            File.AppendAllText("data/highscores.txt", newScore.ToString() + " " + name + "\n", System.Text.Encoding.ASCII);
         }
 
         public static void ShowHighScores()
         {
             List<KeyValuePair<int, string>> scores = new List<KeyValuePair<int, string>>();
-            using (StreamReader reader = new StreamReader("../../highscores.txt"))
+            using (StreamReader reader = new StreamReader("data/highscores.txt"))
             {
                 string currentLine = reader.ReadLine();
                 while (currentLine != null && currentLine != "")
@@ -50,7 +50,7 @@ namespace HighscoreNamespace
             Console.WriteLine("Return to main menu");
             Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine();
-            IntroEndNamespace.IntroAndEndAnimation.PrintFileSnake("../../IntroPythonAnimal.txt");
+            IntroEndNamespace.IntroAndEndAnimation.PrintFileSnake("data/IntroPythonAnimal.txt");
             while (true)
             {
                 var pressed = Console.ReadKey();

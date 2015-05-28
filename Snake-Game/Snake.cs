@@ -26,7 +26,7 @@ namespace SnakeNamespace
         {
             Console.CursorVisible = false;
             // play music
-            using (SoundPlayer player = new SoundPlayer("../../ibasi_zmiqta.wav"))
+            using (SoundPlayer player = new SoundPlayer("data/ibasi_zmiqta.wav"))
             {
                 player.PlayLooping();
             }
@@ -128,8 +128,8 @@ namespace SnakeNamespace
                     Console.Write("{1}{0}", "Enter your name: ", new string(' ', Console.WindowWidth / 2 - 10));
                     string name = Console.ReadLine();
 
-                    IngameMenuNamespace.IngameMenuClass.IngameMenu();
                     Highscore.EnterHighScores(userPoints, name);
+                    IngameMenuNamespace.IngameMenuClass.IngameMenu();
                     return;
                 }
                 Console.SetCursorPosition(snakeHead.col, snakeHead.row);

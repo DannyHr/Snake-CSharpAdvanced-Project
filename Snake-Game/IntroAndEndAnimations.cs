@@ -29,9 +29,9 @@ namespace IntroEndNamespace
             Console.BufferHeight = Console.WindowHeight;
             Console.WindowWidth = windowWidth;
             Console.BufferWidth = Console.WindowWidth;
-            PrintFile("../../IntroHungry.txt");
-            PrintFile("../../IntroPython.txt");
-            PrintFileSnake("../../IntroPythonAnimal.txt");
+            PrintFile("data/IntroHungry.txt");
+            PrintFile("data/IntroPython.txt");
+            PrintFileSnake("data/IntroPythonAnimal.txt");
             Thread.Sleep(3000);
             Console.Clear();
         }
@@ -52,7 +52,7 @@ namespace IntroEndNamespace
         {
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
-            PrintFile("../../BeBlessed.txt");
+            PrintFile("data/BeBlessed.txt");
             Thread.Sleep(1500);
         }
     }

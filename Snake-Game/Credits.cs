@@ -13,7 +13,7 @@ namespace CreditsNamespace
             Console.WriteLine("\n\n{0}Credits:", new string(' ', ((Console.WindowWidth/2) - 8)));
             Console.WriteLine("{0}---------\n\n", new string(' ', ((Console.WindowWidth/2) - 8)));
 
-            using (StreamReader reader = new StreamReader("../../Credits.txt"))
+            using (StreamReader reader = new StreamReader("data/Credits.txt"))
             {
                 string currentLine = reader.ReadLine();
                 while (currentLine != null && currentLine != "")
@@ -29,7 +29,7 @@ namespace CreditsNamespace
             Console.WriteLine("Return to main menu");
             Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine("\n");
-            IntroEndNamespace.IntroAndEndAnimation.PrintFileSnake("../../IntroPythonAnimal.txt");
+            IntroEndNamespace.IntroAndEndAnimation.PrintFileSnake("data/IntroPythonAnimal.txt");
             while (true)
             {
                 var pressed = Console.ReadKey();
