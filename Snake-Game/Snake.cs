@@ -89,7 +89,7 @@ namespace SnakeNamespace
                 negativePoints++;
                 if (Console.KeyAvailable)
                 {
-                    ConsoleKeyInfo userInput = Console.ReadKey();
+                    ConsoleKeyInfo userInput = Console.ReadKey(true);
                     switch (userInput.Key)
                     {
                         case ConsoleKey.LeftArrow:
